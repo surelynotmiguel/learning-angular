@@ -1,0 +1,21 @@
+{
+  "Welcome": "Bem-Vindo!",
+  "PleaseLogin": "Por favor, entre para começar.",
+  "Email": "E-mail",
+  "Password": "Senha",
+  "LoginBtn": "Login",
+  "CreateAccountBtn": "Criar Conta",
+  "Copyright": "@ Copyright 2026",
+  "MadeBy": "Made by",
+  "Or": "Ou",
+  "TalkToUs": "Fale Conosco",
+  "DogImageTitle": "Doguinho Romântico",
+  "DogImageCaption": "Último doguinho romântico do planeta em pé nas patinhas traseiras, segurando um buquê de flores coloridas na boca.",
+  "DogImageAlt": "Cachorro em pé nas patas traseiras segurando um buquê de flores na boca.",
+  "CatImageTitle": "Molho Felino à Vaporwave",
+  "CatImageCaption": "Um gatito todo engomadinho, de óculos de sol, com armação transparente, e uma jaqueta vermelha maneira.",
+  "CatImageAlt": "Gato de ócolus de sol, com armação transparente, e uma jaqueta vermelha estilosa.",
+  "PandaImageTitle": "Pandinha Aventureiro",
+  "PandaImageCaption": "Um urso panda muito fofinho em cima de uma árvore, se segurando firmemente aos galhos dela.",
+  "PandaImageAlt": "Urso panda na árvore."
+}

@@ -12,14 +12,24 @@
   "private": true,
   "packageManager": "npm@11.20.0",
   "dependencies": {
+    "@angular/aria": "^22.3.0",
+    "@angular/cdk": "^22.3.0",
     "@angular/common": "^22.3.0",
     "@angular/compiler": "^22.3.0",
     "@angular/core": "^22.3.0",
     "@angular/forms": "^22.3.0",
+    "@angular/material": "^22.3.0",
     "@angular/platform-browser": "^22.3.0",
     "@angular/platform-server": "^22.3.0",
     "@angular/router": "^22.3.0",
     "@angular/ssr": "^22.3.0",
+    "@coreui/angular": "~5.7.44",
+    "@coreui/coreui": "^5.9.1",
+    "@coreui/icons-angular": "~5.7.44",
+    "@fortawesome/angular-fontawesome": "^5.1.0",
+    "@fortawesome/free-solid-svg-icons": "^7.3.1",
+    "@popperjs/core": "~2.11.8",
+    "angular-eslint": "^22.8.0",
     "express": "^5.1.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
@@ -34,5 +44,11 @@
     "prettier": "^3.8.1",
     "typescript": "~6.0.2",
     "vitest": "^5.0.0"
+  },
+  "allowScripts": {
+    "@parcel/watcher@2.6.0": true,
+    "esbuild@0.28.2": true,
+    "lmdb@3.5.9": true,
+    "msgpackr-extract@3.0.7": true
   }
 }

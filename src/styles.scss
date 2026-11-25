@@ -1,1 +1,243 @@
+@use "@coreui/coreui/scss/coreui.scss";
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  height: 100%;
+  @include mat.theme(
+    (
+      color: (
+        primary: mat.$azure-palette,
+        tertiary: mat.$blue-palette,
+      ),
+      typography: Roboto,
+      density: 0,
+    )
+  );
+}
+
+body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  background-color: var(--mat-sys-surface);
+  color: var(--mat-sys-on-surface);
+  font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  margin: 0;
+  height: 100%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Carlito:ital,wght@0,400;0,700;1,400;1,700&family=Outfit:wght@100..900&display=swap');
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px !important;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Average+Sans&family=Datatype:wght@100..900&family=Elms+Sans:ital,wght@0,100..900;1,100..900&family=Google+Sans+Flex&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Oswald:wght@200..700&display=swap');
+
+:root {
+  --spacing-0: 0.8rem;
+  --spacing-1: 1.25rem;
+  --border-color-1: #c4c6d0;
+
+  --text-color-1: #720291;
+  
+  --caption-color-1: #c4c6d0;
+
+  --bg-color-0: #57016e;
+  --bg-color-1: #720291;
+  --bg-color-2: #9600c0;
+}
+
+body {
+  font-family: 'Google Sans Flex', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    'slnt' 0,
+    'wdth' 100,
+    'ROND' 0;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  letter-spacing: .05em;
+}
+
+h2 {
+  font-size: 1.4em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  letter-spacing: .05em;
+}
+
+h3 {
+  font-size: 1.3em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  letter-spacing: .05em;
+}
+
+h4 {
+  font-size: 1.2em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  letter-spacing: .05em;
+}
+
+h5 {
+  font-size: 1.1em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  letter-spacing: .05em;
+}
+
+h6 {
+  font-size: 1em;
+  font-weight: bolder;
+  margin-bottom: 5px;
+  letter-spacing: .05em;
+}
+
+p, span, div, i {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  text-rendering: optimizelegibility !important;
+  letter-spacing: .03em;
+}
+
+.page-wrapper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.button-primary,
+.button-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.button-primary {
+  color: white !important;
+  background-color: var(--bg-color-1) !important;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    background-color: var(--bg-color-2) !important;
+  }
+
+  &:active {
+    background-color: var(--bg-color-0) !important;
+  }
+}
+
+.button-secondary {
+  color: var(--text-color-1) !important;
+  border: 1px solid var(--text-color-1) !important;
+  transition: all 0.1s ease-in-out;
+
+  &:hover {
+    color: white !important;
+    background-color: var(--bg-color-1) !important;
+  }
+
+  &:active {
+    background-color: var(--bg-color-0) !important;
+  }
+}
+
+.button-google {
+  width: 100% !important;
+  background-color: whitesmoke !important;
+
+  
+}
+
+.form-box {
+  width: 100%;
+
+  .form {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+}
+
+.separator-w-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--caption-color-1);
+  width: 100%;
+  margin: var(--spacing-0) 0;
+
+  &::before, &::after {
+    flex: 1;
+    content: '';
+    height: 1px;
+    background-color: var(--caption-color-1);
+    margin: 5px;
+  }
+}
+
+.separator {
+  height: 1px;
+  background-color: var(--caption-color-1);
+  width: 100%;
+  margin: var(--spacing-0) 0;
+}

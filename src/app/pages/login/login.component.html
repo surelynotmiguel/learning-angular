@@ -1,0 +1,121 @@
+@if (translations$ | async; as translations) {
+  @if (translations && slides.length) {
+    <ng-container
+      [ngTemplateOutlet]="hello"
+      [ngTemplateOutletContext]="{ translations }"
+    ></ng-container>
+  }
+}
+
+<ng-template #hello let-translations="translations">
+  <div class="page-wrapper">
+    <div class="login-box">
+      <div class="login-box-image">
+        <c-carousel [interval]="5000">
+          <c-carousel-indicators />
+          <c-carousel-inner>
+            @for (slide of slides; track slide.src) {
+              <c-carousel-item>
+                <img
+                  alt="{{ slide.title }}"
+                  class="d-block w-100"
+                  loading="lazy"
+                  src="{{ slide.src }}"
+                  alt="{{ slide.alt }}"
+                />
+                <c-carousel-caption class="d-none d-md-block">
+                  <h3>{{ slide.title }}</h3>
+                  <p>{{ slide.subtitle }}</p>
+                </c-carousel-caption>
+              </c-carousel-item>
+            }
+          </c-carousel-inner>
+          <c-carousel-control [routerLink] caption="Previous" direction="prev" />
+          <c-carousel-control [routerLink] caption="Next" direction="next" />
+        </c-carousel>
+      </div>
+
+      <mat-divider [vertical]="true"></mat-divider>
+
+      <div class="login-area">
+        <div class="title-box center">
+          <div class="logo-container"></div>
+          
+          <div class="title-subtitle center row">
+            <h2>{{ translations['Welcome'] }}</h2>
+            <span>{{ translations['PleaseLogin'] }}</span>
+          </div>
+        </div>
+
+        <div class="form-box w-100 center column">
+          <form class="form" [formGroup]="form" (ngSubmit)="submit()">
+            <mat-form-field appearance="outline" class="email-field">
+              <mat-label>{{ translations['Email'] }}</mat-label>
+
+              <input
+                matInput
+                type="email"
+                [formControl]="f.email"
+              >
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" class="password-field">
+              <mat-label>{{ translations['Password'] }}</mat-label>
+
+              <input
+                matInput
+                type="password"
+                [formControl]="f.password"
+              >
+            </mat-form-field>
+
+            <div class="form-action-buttons column w-100">
+              <button
+                mat-button
+                type="submit"
+                class="button-primary"
+              >
+                <i class="material-icons">login</i>
+                <span>{{ translations['LoginBtn'] }}</span>
+              </button>
+
+              <button
+                mat-button
+                type="button"
+                class="button-secondary"
+              >
+                <i class="material-icons">add</i>
+                <span>{{ translations['CreateAccountBtn'] }}</span>
+              </button>
+            </div>
+          </form>
+
+          <div class="separator-w-text">{{ translations['Or'] }}</div>
+
+          <div class="alternative-login-options column w-100">
+            <button
+              mat-button
+              type="submit"
+              class="button-secondary"
+            >
+              <i class="material-icons">sms</i>
+              <span>{{ translations['TalkToUs'] }}</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="login-area-caption center column w-100">
+          <span>{{ translations['Copyright'] }}</span>
+          <span>{{ translations['MadeBy'] }} 
+            <a 
+              [href]="system.APP_AUTHOR_PAGE" 
+              target="_blank"
+            >
+              {{ system.APP_AUTHOR }}
+            </a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
